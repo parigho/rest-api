@@ -1,0 +1,121 @@
+{
+  "info": {
+    "name": "Mock REST API - PHP",
+    "_postman_id": "rest-api-php-mock-20250505091916",
+    "description": "Postman collection to test the mock PHP REST API (login, profile update, data sync).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "user@example.com"
+            },
+            {
+              "key": "password",
+              "value": "password123"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost/rest-api/api/login.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "rest-api",
+            "api",
+            "login.php"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Profile Update",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "John Doe"
+            },
+            {
+              "key": "token",
+              "value": "mock-token-123"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost/rest-api/api/profile_update.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "rest-api",
+            "api",
+            "profile_update.php"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Sync",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "data",
+              "value": "{\"orders\":5,\"inventory\":20}"
+            },
+            {
+              "key": "token",
+              "value": "mock-token-123"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost/rest-api/api/data_sync.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "rest-api",
+            "api",
+            "data_sync.php"
+          ]
+        }
+      }
+    }
+  ]
+}
